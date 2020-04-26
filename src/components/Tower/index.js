@@ -3,7 +3,6 @@ import Button from "../UI/Button";
 import classes from "./Tower.module.css";
 
 const tower = (props) => {
-  console.log(props.bar.length);
   return (
     <div className={classes.TowerContainer}>
       <div className={classes.Tower}>
@@ -26,7 +25,12 @@ const tower = (props) => {
       </div>
       <Button
         clicked={() => props.setActiveFloor(props.num)}
-        disabled={props.bar.length === 0}
+        disabled={
+          !props.activeFloor
+            ? props.bar.length === 0
+            : props.bar.length !== 0 &&
+              props.bar[props.bar.length - 1] < props.activeFloor
+        }
       />
     </div>
   );

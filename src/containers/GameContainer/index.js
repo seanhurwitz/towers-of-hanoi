@@ -4,8 +4,6 @@ import Tower from "../../components/Tower";
 
 class GameContainer extends Component {
   render() {
-    console.log(typeof this.props.activeFloor);
-    console.log(typeof this.props.numFloors);
     return (
       <div className={classes.GameContainer}>
         <div
@@ -27,6 +25,7 @@ class GameContainer extends Component {
               num={idx + 1}
               key={idx + 1}
               setActiveFloor={this.props.setActiveFloor}
+              activeFloor={this.props.activeFloor}
             />
           ))}
         </div>
