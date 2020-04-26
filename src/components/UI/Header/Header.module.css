@@ -6,7 +6,7 @@
   height: 60px;
   background-color: mediumslateblue;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 10px;
   transition: ease;

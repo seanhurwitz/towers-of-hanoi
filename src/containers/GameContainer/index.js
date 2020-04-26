@@ -4,14 +4,31 @@ import Tower from "../../components/Tower";
 
 class GameContainer extends Component {
   render() {
+    console.log(typeof this.props.activeFloor);
+    console.log(typeof this.props.numFloors);
     return (
       <div className={classes.GameContainer}>
-        GameContainer
-        <div className={classes.ActiveContainer}>ActiveContainer</div>
+        <div
+          className={classes.ActiveContainer}
+          style={{
+            width: `calc(100%*${
+              this.props.activeFloor / this.props.numFloors
+            }/3)`,
+            height: `calc(60%/${this.props.numFloors})`,
+          }}
+        >
+          {this.props.activeFloor}
+        </div>
         <div className={classes.Towers}>
-          <Tower bar={this.props.bar1} numFloors={this.props.numFloors} />
-          <Tower bar={this.props.bar2} numFloors={this.props.numFloors} />
-          <Tower bar={this.props.bar3} numFloors={this.props.numFloors} />
+          {this.props.bars.map((bar, idx) => (
+            <Tower
+              bar={bar}
+              numFloors={this.props.numFloors}
+              num={idx + 1}
+              key={idx + 1}
+              setActiveFloor={this.props.setActiveFloor}
+            />
+          ))}
         </div>
       </div>
     );

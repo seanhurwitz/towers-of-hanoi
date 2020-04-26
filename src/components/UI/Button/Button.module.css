@@ -2,19 +2,23 @@
   border: 1px solid antiquewhite;
   border-radius: 10px;
   margin: 0 20px;
-  height: 80%;
-  width: 180px;
+  height: 20%;
+  width: 100%;
   font-size: 100%;
   font-weight: bold;
-  color: mediumslateblue;
+  background-color: green;
   cursor: pointer;
 }
 
 .Button:hover {
-  background-color: mediumslateblue;
+  background-color: darkgreen;
   color: antiquewhite;
 }
 
 .Button:active {
-  font-size: 180%;
+  box-shadow: 2px 2px 2px black;
+}
+
+.Button:disabled {
+  background-color: darkgrey;
 }

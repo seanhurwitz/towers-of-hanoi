@@ -1,0 +1,13 @@
+.FloorSelection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.FloorSelection form,
+input {
+  margin: 2px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

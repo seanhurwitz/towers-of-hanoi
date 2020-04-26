@@ -5,12 +5,7 @@ import classes from "./Header.module.css";
 const header = (props) => {
   return (
     <div className={classes.Header}>
-      <h1>MY MEAL PLAN GENERATOR</h1>
-      <div
-        style={{ height: "100%", display: "flex", justifyContent: "center" }}
-      >
-        helooo
-      </div>
+      <h1>MOVES: {props.moves}</h1>
     </div>
   );
 };
