@@ -18,6 +18,19 @@ class FloorSelection extends Component {
       <Fragment>
         {" "}
         <h1>Welcome to Towers of Hanoi</h1>
+        <p>
+          The goal of the puzzle is to move all the disks from the leftmost peg
+          to the rightmost peg, adhering to the following rules:
+        </p>
+        <ol>
+          <li> Move only one disk at a time.</li>
+          <li>A larger disk may not be placed on top of a smaller disk.</li>
+          <li>All disks, except the one being moved, must be on a peg.</li>
+        </ol>
+        <p>
+          Click on the green base to pop the uppermost floor and select another
+          base to drop it down.
+        </p>
       </Fragment>
     ) : (
       <Fragment>

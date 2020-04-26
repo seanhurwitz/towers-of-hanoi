@@ -13,8 +13,13 @@ input {
   align-items: center;
 }
 
-.FloorSelection h2{
+.FloorSelection h2 {
   display: flex;
   align-items: center;
   vertical-align: middle;
+  padding: 5px;
+}
+
+.FloorSelection li {
+  text-align: left;
 }
