@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import { Header } from "./components/UI";
+import GameContainer from "./containers/GameContainer";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    numFloors: 3,
+    bar1: [1, 2, 3],
+    bar2: [],
+    bar3: [],
+    activeBar: null,
+    moves: 0,
+  };
+  render() {
+    return (
+      <Fragment>
+        <Header moves={this.state.moves} />
+        <GameContainer
+          numFloors={this.state.numFloors}
+          bar1={this.state.bar1}
+          bar2={this.state.bar2}
+          bar3={this.state.bar3}
+          activeBar={this.state.activeBar}
+        />
+      </Fragment>
+    );
+  }
 }
 
 export default App;
