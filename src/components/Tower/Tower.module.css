@@ -38,7 +38,7 @@
   justify-content: center;
   font-weight: bold;
   color: white;
-  font-size: 8px;
+  font-size: 100%;
 }
 
 .Floors {
@@ -49,4 +49,23 @@
   flex-direction: column-reverse;
   justify-content: flex-start;
   align-items: center;
+}
+
+.MoveableFloor {
+  margin-top: 1%;
+  height: 5%;
+  background-color: mediumslateblue;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  color: rgb(255, 235, 133);
+  font-size: 150%;
+}
+
+.MoveableFloor:hover {
+  background-color: rgb(76, 64, 144);
+  cursor: pointer;
 }

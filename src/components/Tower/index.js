@@ -9,10 +9,19 @@ const tower = (props) => {
         <div className={classes.Column}></div>
         <div className={classes.Floors}>
           {" "}
-          {props.bar.map((floor) => (
+          {props.bar.map((floor, idx) => (
             <div
               key={floor}
-              className={classes.Floor}
+              className={
+                idx === props.bar.length - 1 && !props.activeFloor
+                  ? classes.MoveableFloor
+                  : classes.Floor
+              }
+              onClick={
+                idx === props.bar.length - 1 &&
+                !props.activeFloor &&
+                (() => props.setActiveFloor(props.num))
+              }
               style={{
                 width: `calc(100%*${floor / props.numFloors})`,
                 height: `calc(70%/${props.numFloors})`,
